@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class Dchild extends Dlearn implements Shape{
 //    Class Variable numOfChild
     static int numOfChild=0;
-
 //    Class initializer
     static{
         System.out.print("There child are born.");

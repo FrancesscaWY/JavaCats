@@ -1,6 +1,8 @@
 package com.java.learn;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
+import java.util.Comparator;
 
 public class Family {
 //    List attribute
@@ -27,11 +29,26 @@ public class Family {
         Collections.sort(heights);
         return heights;
     }
+
+//    Method reverseShowH:return the reverse sequence of heights
+    public ArrayList<Integer> reverseShowH(){
+        Collections.reverse(heights);
+        return heights;
+    }
+
+//    Method descendingShowH:return the descending sequence of heights
+    public ArrayList<Integer>descendingShowH(){
+        Collections.sort(heights,Collections.reverseOrder());
+        return heights;
+    }
+
 //    Method showHeights: show element value of heights list
     public void showHeights(){
         for(Integer height:heights){
             System.out.print(height+" ");
         }
+        System.out.println("\n");
+        Stream.delimiter();
     }
 //    Method getSize:print the size of parents and heights
     public void getSize(){

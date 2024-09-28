@@ -26,7 +26,7 @@ public class App
         son.showIdentity();
 
 //        use the method state by interface Shape and defined by class Dchild
-        son.                setType("Bunny");
+        son.setType("Bunny");
         son.getType();
 
 //        use the method showFamily to print the enum member
@@ -49,9 +49,22 @@ public class App
             family.addParents(new Dlearn());
             family.addHeights(i);
         }
+
+
+//        use method reverseShowH to reverse the sequence of heights and print it.
+        family.showHeights();
+        family.addHeights(7);
+        family.reverseShowH();
+        family.showHeights();
 //        use method sortHeights to sort it and then use method getHeights to print the heights
         family.sortHeights();
         family.showHeights();
+//        use method descendingShowH to sort the heights in descending and print it.
+        family.addHeights(8);
+        family.showHeights();
+        family.descendingShowH();
+        family.showHeights();
+
 //        use setParent to insert element at one index and get it by getParentMethod
         Dlearn d = new Dlearn();
         family.setParent(4,d,12);
@@ -103,6 +116,49 @@ public class App
         hs.clearH();
         System.out.println("The size after clear: "+hs.getSize());
 
+        Stream.delimiter();
+
+
+/*        Follows codes are the learning process of HashMap, which I mature the class Foods by the use of HashMap.
+ *        In detailed, I define one attribute FoodPrice which "key" is food name and "value" is food price.
+ *        There also are method operate the data member,so then are the use and operation of "FoodPrice."          */
+
+        Stream.topic("hashmap");
+//        create a food object
+        Foods fruits = new Foods();
+//        use method addFood to add some "fruit with price" to the fruits
+        fruits.addFood("waterWomen",11.13);
+        fruits.addFood("grape",5.66);
+        fruits.addFood("banana",9.89);
+        fruits.addFood("apple",3.55);
+//       use method getPrice to return price by one "key"
+        fruits.getPrice("banana");
+
+        Stream.delimiter();
+
+//       use method removeP to remove one element by "key",and use method showFP to show the element before and after "remove"
+        Stream.text("The fruits before remove: ");
+        fruits.showFP();
+        fruits.removeF("grape");
+        Stream.text("The fruits after remove: ");
+        fruits.showFP();
+
+        Stream.delimiter();
+
+//        use method showF and showP only print the "key" and "value"
+        Stream.text("The fruits' name: ");
+        fruits.showF();
+        Stream.text("The fruits' price: ");
+        fruits.showP();
+
+        Stream.delimiter();
+//        use method clearFP to clear the elements in fruits and call the method getSizeFP to show change before and after
+//        remove
+        Stream.text("The size before clear: ");
+        fruits.getSizeFP();
+        fruits.clearFP();
+        Stream.text("The size after clear: ");
+        fruits.getSizeFP();
 
     }
 }
