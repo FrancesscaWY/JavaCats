@@ -160,5 +160,41 @@ public class App
         Stream.text("The size after clear: ");
         fruits.getSizeFP();
 
+        Stream.delimiter();
+
+        Stream.topic("HashSet");
+/*        Follows codes are the learning process of HashSet ,through addition the class Food with the attribute "nameList".
+          NameList is implemented by class HashSet and through the HashSet define some operations about nameList.
+*         Follows are the use the method defined through HashSet.   */
+
+//        use method addFN to add elements to fruits object
+        fruits.addFN("apple");
+        fruits.addFN("banana");
+        fruits.addFN("cherry");
+        fruits.addFN("strawberry");
+        fruits.addFN("waterWomen");
+
+//        use exit method to return if the food exits in fruits
+        fruits.exitFN("cherry");
+        fruits.exitFN("grape");
+
+        Stream.delimiter();
+
+//        use showFN method to display the foods in fruits object
+        fruits.showFN();
+
+//        use removeFN method to remove some food in fruits
+        fruits.removeFN("apple");
+        fruits.showFN();
+
+        Stream.delimiter();
+
+//        use clearFN method to clear the foods then show the size change by method getSizeFN
+        Stream.text("The size of foods before clearFN: "+fruits.getSizeFN());
+        fruits.clearFN();
+        Stream.text("The size of foods after clearFN: "+fruits.getSizeFN());
+
+
+
     }
 }

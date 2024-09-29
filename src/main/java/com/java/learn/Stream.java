@@ -16,4 +16,7 @@ public class Stream {
     static void wrap(){
         System.out.println("\n");
     }
+    static void blank(String str){
+        System.out.print(str+" ");
+    }
 }

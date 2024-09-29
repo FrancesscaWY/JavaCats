@@ -1,8 +1,9 @@
 package com.java.learn;
 import java.util.HashMap;
-
+import java.util.HashSet;
 public  class Foods {
     protected String name;
+    protected HashSet<String> nameList = new HashSet<String>();
     private HashMap<String,Double> FoodPrice = new HashMap<String,Double>();
 //    Constructor Foods
     Foods(){};
@@ -52,5 +53,38 @@ public  class Foods {
 //    Method clearF: clear all items(food and price)
     public void clearFP(){
         FoodPrice.clear();
+    }
+
+//    Method addFN:add element to nameList
+    public void addFN(String str){
+        nameList.add(str);
+    }
+//    Method exitFN:return the condition if nameList contain element
+    public void exitFN(String str){
+        if(nameList.contains(str)){
+            Stream.text("Food "+str+" is exited.");
+        }else{
+            Stream.text("Food "+str+" is not exited.");
+        }
+    }
+//    Method removeFN:move element in nameList
+    public void removeFN(String str){
+        nameList.remove(str);
+    }
+//    Method getSizeFN:return the size of nameList
+    public int getSizeFN(){
+        return nameList.size();
+    }
+//    Method showFN:show all food name element in nameList
+    public void  showFN(){
+        Stream.text("The foods in fruits : ");
+        for(String i:nameList){
+            Stream.blank(i);
+        }
+        Stream.wrap();
+    }
+//    Method clearFN:clear all element in nameList
+    public void clearFN(){
+        nameList.clear();
     }
 }
