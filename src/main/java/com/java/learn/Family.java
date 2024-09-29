@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Comparator;
+import java.util.Iterator;
 
 public class Family {
 //    List attribute
@@ -75,6 +76,15 @@ public class Family {
         System.out.println("This place is "+parents.get(index)+" and the height is "+heights.get(index));
     }
 
+    public void removeLess(int num){
+        Iterator<Integer> it = heights.iterator();
+        while(it.hasNext()){
+            int i = it.next();
+            if(i<15){
+                it.remove();
+            }
+        }
+    }
 
 
 }

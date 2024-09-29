@@ -1,5 +1,7 @@
 package com.java.learn;
 
+import java.util.Iterator;
+
 /**
  * Hello world!
  *
@@ -173,6 +175,11 @@ public class App
         fruits.addFN("cherry");
         fruits.addFN("strawberry");
         fruits.addFN("waterWomen");
+        fruits.addFN("banana");
+//        use method showFN to see that even if there are two "banana" , but just display one "banana", because
+//        in HashSet , every element is unique
+        Stream.text("After add two \"banana\" and display: ");
+        fruits.showFN();
 
 //        use exit method to return if the food exits in fruits
         fruits.exitFN("cherry");
@@ -194,6 +201,45 @@ public class App
         fruits.clearFN();
         Stream.text("The size of foods after clearFN: "+fruits.getSizeFN());
 
+        Stream.delimiter();
+
+/*        Follows are the learning process of Iterator , because the design of Iterator is to access the elements out it's
+ *        class ,so we create Iterator object in App class without enclose it in the class, then we will use the Iterator
+ *        object complete the loop and remove operation about Heights and fruits*/
+        Stream.topic("Iterator");
+//        create the vegetable object of class foods
+        Foods vegetable = new Foods();
+        vegetable.addFN("tomato");
+        vegetable.addFN("potato");
+        vegetable.addFN("carrot");
+
+//        create an iterator to vegetables object
+        Iterator<String> it = vegetable.setIterator();
+//        use method next in Iterator object to display one food name out the class Foods.
+        Stream.text("Display by iterator out the class Foods: ");
+        Stream.text(it.next());
+
+        Stream.delimiter();
+
+//        use method sfnIt to in class Foods to display elements in vegetable.
+        vegetable.sfnIt();
+
+        Stream.delimiter();
+//        create a family object f2
+        Family f2 = new Family();
+//        add heights to f2 by loop
+        for(int i=4;i<20;i++){
+            f2.addHeights(i);
+        }
+//        use method removeLess to loop remove heights less than one value which is defined by remove
+        Stream.text("The heights list before loop remove: ");
+        f2.showHeights();
+        f2.removeLess(14);
+        Stream.text("The heights list after loop remove: ");
+        f2.showHeights();
+
+
+//        use the Iterator
 
 
     }

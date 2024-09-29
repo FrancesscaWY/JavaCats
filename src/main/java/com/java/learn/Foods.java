@@ -1,6 +1,8 @@
 package com.java.learn;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
+
 public  class Foods {
     protected String name;
     protected HashSet<String> nameList = new HashSet<String>();
@@ -87,4 +89,19 @@ public  class Foods {
     public void clearFN(){
         nameList.clear();
     }
+
+//    Method Iterator : create the foods object's iterator out the foods class
+    public Iterator<String> setIterator(){
+        return nameList.iterator();
+    }
+
+//    Method sfnIt: display nameList by Iterator
+    public void sfnIt(){
+        Stream.text("The food list are(by Iterator) : ");
+        Iterator<String> it = nameList.iterator();
+        while(it.hasNext()){
+            Stream.text(it.next());
+        }
+    }
+
 }
