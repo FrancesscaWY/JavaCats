@@ -225,6 +225,7 @@ public class App
         vegetable.sfnIt();
 
         Stream.delimiter();
+
 //        create a family object f2
         Family f2 = new Family();
 //        add heights to f2 by loop
@@ -238,8 +239,6 @@ public class App
         Stream.text("The heights list after loop remove: ");
         f2.showHeights();
 
-
-//        use the Iterator
 
 
     }
