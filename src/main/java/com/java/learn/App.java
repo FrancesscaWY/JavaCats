@@ -239,6 +239,15 @@ public class App
         Stream.text("The heights list after loop remove: ");
         f2.showHeights();
 
+/*      Point class */
+        Stream.topic("Point_initializer");
+
+//        use the three different constructors to create three objects of Point
+//        and the object initializer will be called three times before object created.
+        Stream.text("Follows show three times object initializer is called :");
+        Point p1 = new Point();
+        Point p2 = new Point(2);
+        Point p3 = new Point(3,4);
 
 
     }

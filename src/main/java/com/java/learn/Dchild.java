@@ -27,7 +27,9 @@ public class Dchild extends Dlearn implements Shape{
     }
 
 //    Method getType : return the value of type
-    public void getType(){System.out.println("My type is "+ type);}
+    public void getType(){
+            System.out.println("My type is " + type);
+    }
 
 //    Method showIdentity: return the class dSon is subclass to perform the polymorphism
     public void showIdentity(){
