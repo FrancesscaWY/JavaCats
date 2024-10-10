@@ -28,6 +28,17 @@ public class Stream {
     static void Errors(){
         System.out.println("There are some errors !");
     }
+    static void writeIn(String file,String contents){
+        try{
+            FileWriter writer = new FileWriter(file);
+            writer.write(contents);
+            writer.close();
+            Stream.text("Success to write: " + file + " file");
+        }catch (Exception e){
+            Stream.Errors();
+            e.printStackTrace();
+        }
+    }
     static String readOut(String pathName){
         File file =  new File(pathName);
         String copyF="";

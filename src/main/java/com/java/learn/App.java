@@ -276,14 +276,14 @@ public class App
 
 //        use SearchText constructor to create a SearchText object with a file name
         Stream.text("Create the file : " );
-        SearchText file = new SearchText("/home/francessca/JavaProjects/File/Learn/javaCat/src/main/TXT/demo5.txt");
+        SearchText file = new SearchText("/home/francessca/JavaProjects/File/Learn/javaCat/src/main/TXT/demo6.txt");
 
 //        use readOut method in class Stream to read the existed file's contents and store it in an String variable
         String strings = Stream.readOut("/home/francessca/JavaProjects/File/Learn/javaCat/src/main/TXT/test_1.txt");
 
 //        use writeIn method to write the strings(read from existed file) to the file
         Stream.text("Write to the file :" + file.fileName());
-        file.writeIn(strings);
+        file.writeT(strings);
 
 
 //        use method readT and Stream.text to return and print the content of file
@@ -305,7 +305,7 @@ public class App
 
 //        use deleteFile method(in Stream class) to delete the file contents in SearchText object
         Stream.deleteFile("demo4.txt");
-        Stream.deleteFile("/home/francessca/JavaProjects/File/Learn/javaCat/src/main/TXT/demo4.txt");
+        Stream.deleteFile("/home/francessca/JavaProjects/File/Learn/javaCat/src/main/TXT/demo5.txt");
 
 //        use method deleteT in class SearchText to delete Search object
         file.deleteT();

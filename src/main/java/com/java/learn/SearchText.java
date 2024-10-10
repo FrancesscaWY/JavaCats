@@ -25,16 +25,8 @@ public class SearchText {
     }
 
 //    Method writeIn : Wrote to the file.
-    public void writeIn(String words){
-        try {
-            FileWriter tWriter = new FileWriter(this.text.getName());
-            tWriter.write(words);
-            tWriter.close();
-            Stream.text("Successfully wrote to the " + text.getName() + "file.");
-        } catch (Exception e){
-           Stream.Errors();
-           e.printStackTrace();
-        }
+    public void writeT(String words){
+       Stream.writeIn(text.getName(),words);
     }
 
 //    Method readT:readeT the contents in certain file and return the content with String type
