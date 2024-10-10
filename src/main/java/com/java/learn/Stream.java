@@ -1,4 +1,7 @@
 package com.java.learn;
+import java.util.Scanner;
+import java.io.File;
+import java.io.FileWriter;
 
 public class Stream {
 //    Stream Constructor
@@ -21,5 +24,30 @@ public class Stream {
     }
     static void outInt(int x){
         System.out.println(x);
+    }
+    static void Errors(){
+        System.out.println("There are some errors !");
+    }
+    static String readOut(String pathName){
+        File file =  new File(pathName);
+        String copyF="";
+        try {
+            Scanner reader = new Scanner(file);
+            while(reader.hasNextLine()){
+                copyF += reader.nextLine();
+            }
+        }catch(Exception e){
+            Stream.Errors();
+            e.printStackTrace();
+        }
+        return copyF;
+    }
+    static void deleteFile(String pathName){
+        File file = new File(pathName);
+        if(file.delete()){
+            Stream.text("Success to delete file " + pathName);
+        }else{
+            Stream.text("Failed to delete file " + pathName);
+        }
     }
 }

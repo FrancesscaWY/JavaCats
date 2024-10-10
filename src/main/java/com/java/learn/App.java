@@ -256,6 +256,58 @@ public class App
        Stream.outInt(Point.getNumOfPoint());
        Stream.text(Point.getNumOfPoint().toString());
 
+       Stream.delimiter();
 
+/*       use try catch to define exception by self.*/
+        Stream.topic("exception");
+        try{
+            int[] array={1,2,3};
+            String[] words= {"hi","I","you"};
+//            If the print of array[0] after words[3],the array[0] will not be print because of exception.
+            Stream.outInt(array[0]);
+            Stream.text(words[3]);
+        } catch (Exception e){
+            Stream.text("There is a exception with memory leaked.");
+        }
+
+        Stream.delimiter();
+
+        Stream.topic("File&Search");
+
+//        use SearchText constructor to create a SearchText object with a file name
+        Stream.text("Create the file : " );
+        SearchText file = new SearchText("/home/francessca/JavaProjects/File/Learn/javaCat/src/main/TXT/demo5.txt");
+
+//        use readOut method in class Stream to read the existed file's contents and store it in an String variable
+        String strings = Stream.readOut("/home/francessca/JavaProjects/File/Learn/javaCat/src/main/TXT/test_1.txt");
+
+//        use writeIn method to write the strings(read from existed file) to the file
+        Stream.text("Write to the file :" + file.fileName());
+        file.writeIn(strings);
+
+
+//        use method readT and Stream.text to return and print the content of file
+        Stream.delimiter();
+        Stream.text("After writing, the contents in file :");
+        Stream.text(file.readeT());
+        Stream.delimiter();
+
+        Stream.text("Find Operation in file : " + file.fileName());
+
+//        use finOrdinary method to find if there are certain words(without spacial characters) in file
+        file.findOrdinary("life");
+
+//        use fileSpecular method to find id there are certain words (with spacial characters) in file
+        Stream.text("use findOrdinary to find \" level.\" : ");
+        file.findOrdinary("level.");
+        Stream.text("use findSpecular to find \" level.\" : ");
+        file.findSpecular("level.");
+
+//        use deleteFile method(in Stream class) to delete the file contents in SearchText object
+        Stream.deleteFile("demo4.txt");
+        Stream.deleteFile("/home/francessca/JavaProjects/File/Learn/javaCat/src/main/TXT/demo4.txt");
+
+//        use method deleteT in class SearchText to delete Search object
+        file.deleteT();
     }
 }
