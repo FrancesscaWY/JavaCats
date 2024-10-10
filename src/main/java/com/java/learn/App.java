@@ -239,7 +239,7 @@ public class App
         Stream.text("The heights list after loop remove: ");
         f2.showHeights();
 
-/*      Point class */
+/*        Point class */
         Stream.topic("Point_initializer");
 
 //        use the three different constructors to create three objects of Point
@@ -248,6 +248,13 @@ public class App
         Point p1 = new Point();
         Point p2 = new Point(2);
         Point p3 = new Point(3,4);
+
+//        use class method getNumOfPoints to show the counts of points
+//        outInt method in class Stream to print int type data to screen
+//        use toString method in wrapper class(Integer,Double,String,Boolean...) convert itself to String datatype
+       Stream.text("The number of points (int/String) :");
+       Stream.outInt(Point.getNumOfPoint());
+       Stream.text(Point.getNumOfPoint().toString());
 
 
     }

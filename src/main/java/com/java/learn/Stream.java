@@ -19,4 +19,7 @@ public class Stream {
     static void blank(String str){
         System.out.print(str+" ");
     }
+    static void outInt(int x){
+        System.out.println(x);
+    }
 }
