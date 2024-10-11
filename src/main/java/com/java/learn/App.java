@@ -309,5 +309,22 @@ public class App
 
 //        use method deleteT in class SearchText to delete Search object
         file.deleteT();
+
+        Stream.delimiter();
+        /*This part is practice of Thread, Kitchen class used to emulate different cooking with same time.
+        * Follows are test for the class by method run and start.
+        * What we need understand is because the thread are executing same time,so the sequence of them is unsure
+        * until they complete execution.*/
+        Stream.topic("Thread");
+
+//        Create two Kitchen object by constructor function
+        String[] foods1={"tomato","eggs","scallion"},foods2={"potato","chili","garlic","oil"};
+        Kitchen dish1 = new Kitchen(foods1);
+        Kitchen dish2 = new Kitchen(foods2);
+
+        dish1.start();
+        dish2.start();
+        Stream.text("This thread is in APP class");
+
     }
 }
