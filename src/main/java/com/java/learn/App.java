@@ -11,10 +11,10 @@ public class App
     public static void main( String[] args )
     {
 //        Create one Dlearn object
-        Dlearn dLearn = new Dlearn();
+        People dLearn = new People();
 
 //        Call the class member callScanner()
-        Dlearn.callScanner();
+        People.callScanner();
 
 //        Say hello to Maven
         System.out.println(Math.PI);
@@ -35,7 +35,7 @@ public class App
         dLearn.showFamily();
 
 //        use the class method to show time
-        Dlearn.showTime();
+        People.showTime();
 
 /*
         First create the Family object,then operate relevant operation about the Family class,
@@ -48,7 +48,7 @@ public class App
         Family family = new Family();
 //        use method addParents to add element to the family object
         for(int i=20;i>10;i--){
-            family.addParents(new Dlearn());
+            family.addParents(new People());
             family.addHeights(i);
         }
 
@@ -68,7 +68,7 @@ public class App
         family.showHeights();
 
 //        use setParent to insert element at one index and get it by getParentMethod
-        Dlearn d = new Dlearn();
+        People d = new People();
         family.setParent(4,d,12);
         family.getParent(4);
 //        use removeParent method to remove a element of parents then use getSize method to return the change of size
@@ -314,7 +314,7 @@ public class App
         /*This part is practice of Thread, Kitchen class used to emulate different cooking with same time.
         * Follows are test for the class by method run and start.
         * What we need understand is because the thread are executing same time,so the sequence of them is unsure
-        * until they complete execution.*/
+        * until they complete execution*/
         Stream.topic("Thread");
 
 //        Create two Kitchen object by constructor function
@@ -325,6 +325,52 @@ public class App
         dish1.start();
         dish2.start();
         Stream.text("This thread is in APP class");
+
+        Stream.delimiter();
+
+        /*Follows are test for method lambdaType which completed by using of lambda expression and interface Shape with
+        * only one method.*/
+        Stream.topic("Lambda");
+//        use method lambdaType to test execution of lambda expression.
+        dish1.lambdaType();
+        dish2.lambdaType();
+
+        Stream.delimiter();
+
+        /*Follows is sort operation to object People which is different from sort to number or alpha.
+        * These are implement by Comparator(same logic) and Comparable */
+        Stream.topic("Advance_sort");
+
+        Stream.text("Sort people by Comparator achieved by lambda expression.");
+//        Create a sorterAP object to store and add people object.
+        sortAgeP sorter = new sortAgeP();
+        sorter.addP("i",23);
+        sorter.addP("r",12);
+        sorter.addP("d",2);
+        sorter.addP("s",24);
+
+//        use method adSort complete by Comparator same logic to sort people list
+        Stream.text("Before and after sorting people list:");
+        sorter.showSeN();
+        sorter.adSort();
+        sorter.showSeN();
+
+        Stream.text("Sort people by Comparable achieved by compareTo method in class People.");
+
+//        creat sortAgeP object to store and add people object.
+        sortAgeP sorter2 = new sortAgeP();
+        sorter2.addP("w",13);
+        sorter2.addP("x",22);
+        sorter2.addP("c",12);
+        sorter2.addP("v",6);
+
+//        use method sortByO complete by Comparable to sort people object list.
+        Stream.text("Before and after sorting people list: ");
+        sorter2.showSeN();
+        sorter2.sortByO();
+        sorter2.showSeN();
+
+
 
     }
 }

@@ -28,4 +28,13 @@ public class Kitchen extends Foods implements Runnable{
         thread.start();
         Stream.text("This code is running out a thread");
     }
+
+//    Method lambdaType : store lambda expression in interface Shape with only one method,which has same parameters and
+//    return type then use this method to show the value of lambda expression
+    public void lambdaType() {
+        Shape cType = () -> {
+            Stream.text("My type is a kitchen,can do different cooking same time. ");
+        };
+        cType.getType();
+    }
 }

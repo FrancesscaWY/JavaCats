@@ -1,22 +1,20 @@
 package com.java.learn;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
-import java.util.Comparator;
 import java.util.Iterator;
 
 public class Family {
 //    List attribute
-    protected ArrayList<Dlearn> parents = new ArrayList<>();
+    protected ArrayList<People> parents = new ArrayList<>();
     protected ArrayList<Integer> heights = new ArrayList<>();
 //    Method setParents:add element to parents list
-    public void addParents(Dlearn deLearn){
+    public void addParents(People deLearn){
         parents.add(deLearn);
     }
 //    Method addParents: show element value of parents list
 //    This method is no senses because the deLearn is dynamic variable and they don't have the identifier
     public void getParents(){
-        for(Dlearn deLearn : parents){
+        for(People deLearn : parents){
 
             System.out.print(deLearn);
         }
@@ -67,7 +65,7 @@ public class Family {
         heights.clear();
     }
 //    Method setParents:insert one element to parent and height list by index
-    public void setParent(int index,Dlearn dlearn,int height){
+    public void setParent(int index, People dlearn, int height){
         parents.set(index,dlearn);
         heights.set(index,height);
     }

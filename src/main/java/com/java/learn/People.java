@@ -3,15 +3,21 @@ import java.util.Scanner;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class Dlearn {
+public class People implements Comparable{
 //    Attributes
     protected final String Love ="I Love China.";
     private enum Family{Father,Mother}
     protected String name;
     protected int age;
     static protected String Time = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss").format(LocalDateTime.now());
-//    Constructor
-    public Dlearn() {
+//    Constructor without parameter
+    public People() {
+    }
+
+//    Constructor with parameter
+    public People(String n,int a){
+        name = n;
+        age = a;
     }
 
 //    Method showTime: return the format local time(class member) now
@@ -40,6 +46,12 @@ public class Dlearn {
         System.out.println("Enter a name: ");
         String name2 =scan.nextLine();
         System.out.println("The name is " + name2);
+    }
+
+//    Method compareTo:compare this people with  other people by age
+    public int compareTo(Object other){
+        People otherP = (People) other;
+        return this.age-otherP.age;
     }
 
 }

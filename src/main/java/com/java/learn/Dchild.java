@@ -1,6 +1,6 @@
 package com.java.learn;
 import java.util.Scanner;
-public class Dchild extends Dlearn implements Shape{
+public class Dchild extends People {
 //    Class Variable numOfChild
     static int numOfChild=0;
 //    Class initializer

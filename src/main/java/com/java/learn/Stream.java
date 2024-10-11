@@ -28,6 +28,9 @@ public class Stream {
     static void Errors(){
         System.out.println("There are some errors !");
     }
+    static void placeH(){
+        System.out.println(" ");
+    }
     static void writeIn(String file,String contents){
         try{
             FileWriter writer = new FileWriter(file);
