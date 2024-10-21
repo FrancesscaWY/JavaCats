@@ -1,5 +1,7 @@
 package com.java.learn;
 
+import com.tool.Stream;
+
 public class Point {
 
 //    member variables have default value(0.00,null,nullptr) even though we don't initialize them.

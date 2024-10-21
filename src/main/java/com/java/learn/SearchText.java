@@ -1,9 +1,9 @@
 package com.java.learn;
+import com.tool.Stream;
+
 import java.io.File;
-import java.io.FileWriter;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
-import java.util.Scanner;
 
 public class SearchText {
 

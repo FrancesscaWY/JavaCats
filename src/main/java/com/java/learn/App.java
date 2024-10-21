@@ -1,5 +1,8 @@
 package com.java.learn;
 
+import com.tool.Stream;
+import com.tool.Calculator;
+
 import java.util.Iterator;
 
 /**
@@ -253,7 +256,7 @@ public class App
 //        outInt method in class Stream to print int type data to screen
 //        use toString method in wrapper class(Integer,Double,String,Boolean...) convert itself to String datatype
        Stream.text("The number of points (int/String) :");
-       Stream.outInt(Point.getNumOfPoint());
+       Stream.outNum(Point.getNumOfPoint());
        Stream.text(Point.getNumOfPoint().toString());
 
        Stream.delimiter();
@@ -264,7 +267,7 @@ public class App
             int[] array={1,2,3};
             String[] words= {"hi","I","you"};
 //            If the print of array[0] after words[3],the array[0] will not be print because of exception.
-            Stream.outInt(array[0]);
+            Stream.outNum(array[0]);
             Stream.text(words[3]);
         } catch (Exception e){
             Stream.text("There is a exception with memory leaked.");
@@ -370,6 +373,47 @@ public class App
         sorter2.sortByO();
         sorter2.showSeN();
 
+        Stream.delimiter();
+//        use method addition in class Calculator to input two numbers and return sum of them
+        Stream.topic("Addition");
+        Calculator.addition();
+
+        Stream.delimiter();
+//        use method cWords to return the length of words in one sentence.
+        Stream.topic("Count Words");
+        Stream.blank("The words length in the string :");
+        Stream.outNum(Calculator.cWords("Hi, I am a freshman this year."));
+
+        Stream.delimiter();
+//        use method reverseStr in class Calculator to reverse string
+        Stream.topic("Reverse String");
+        String str="iLoveYou";
+        Stream.text("The string before reverse: " + str);
+        Stream.text("The string after reverse: " + Calculator.reverseStr(str));
+
+//        use method overload addition to add all elements in array
+        Stream.delimiter();
+        Stream.topic("Addition elements in int array");
+        int[] tArray={1,2,3,4,5,6,6};
+        Stream.text("The sum of elements int array tArray is :" + Calculator.addition(tArray));
+
+//        use method s2Char to convert string to char array
+        Stream.delimiter();
+        Stream.topic("Convert String to char array");
+        char[] chars = Calculator.s2Char(str);
+        Stream.blank("The second char in string str: ");
+        Stream.outChar(chars[1]);
+
+//        use method sortSA to sort the elements in string array.
+        Stream.delimiter();
+        Stream.topic("Sort String Array");
+        String[] tstring = {"waterWoman","apple","banana","strawberry","bean","grape"};
+        Calculator.sortSA(tstring);
+
+//        use method geRandom method to generate a number random between 0 to you want
+        Stream.delimiter();
+        Stream.topic("Random Number");
+        Calculator.geRandom(101);
 
 
     }

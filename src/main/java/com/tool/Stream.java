@@ -1,4 +1,4 @@
-package com.java.learn;
+package com.tool;
 import java.util.Scanner;
 import java.io.File;
 import java.io.FileWriter;
@@ -7,31 +7,37 @@ public class Stream {
 //    Stream Constructor
     public Stream(){};
 //    Class method delimiter
-    static void delimiter(){
+    public static void delimiter(){
         System.out.println("=======================DELIMITER=======================");
     }
-    static void topic(String str){
+    public static void topic(String str){
         System.out.println("======================="+str.toUpperCase()+"=========================");
     }
-    static void text(String text){
+    public static void text(String text){
         System.out.println(text);
     }
-    static void wrap(){
+    public static void wrap(){
         System.out.println("\n");
     }
-    static void blank(String str){
+    public static void blank(String str){
         System.out.print(str+" ");
     }
-    static void outInt(int x){
+    public static void outNum(int x){
         System.out.println(x);
     }
-    static void Errors(){
+    public static void outChar(char c){
+        System.out.println(c);
+    }
+    public static void blank(Enum i){
+        System.out.println(i);
+    }
+    public static void Errors(){
         System.out.println("There are some errors !");
     }
-    static void placeH(){
+    public static void placeH(){
         System.out.println(" ");
     }
-    static void writeIn(String file,String contents){
+    public static void writeIn(String file, String contents){
         try{
             FileWriter writer = new FileWriter(file);
             writer.write(contents);
@@ -42,7 +48,7 @@ public class Stream {
             e.printStackTrace();
         }
     }
-    static String readOut(String pathName){
+    public static String readOut(String pathName){
         File file =  new File(pathName);
         String copyF="";
         try {
@@ -56,7 +62,7 @@ public class Stream {
         }
         return copyF;
     }
-    static void deleteFile(String pathName){
+    public static void deleteFile(String pathName){
         File file = new File(pathName);
         if(file.delete()){
             Stream.text("Success to delete file " + pathName);

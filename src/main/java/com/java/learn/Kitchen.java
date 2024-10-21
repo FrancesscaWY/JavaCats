@@ -1,6 +1,8 @@
 package com.java.learn;
 
 
+import com.tool.Stream;
+
 public class Kitchen extends Foods implements Runnable{
 
 //    Constructor Kitchen: store food in Kitchen

@@ -1,4 +1,6 @@
 package com.java.learn;
+import com.tool.Stream;
+
 import java.util.Scanner;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -52,6 +54,13 @@ public class People implements Comparable{
     public int compareTo(Object other){
         People otherP = (People) other;
         return this.age-otherP.age;
+    }
+
+//    Method loopFamily : loop through and print the enum family
+    public void loopFamily(){
+        for(Family i: Family.values()){
+            Stream.blank(i);
+        }
     }
 
 }
