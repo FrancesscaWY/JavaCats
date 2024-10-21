@@ -16,6 +16,9 @@ public class Stream {
     public static void text(String text){
         System.out.println(text);
     }
+    public static void text(boolean b){
+        System.out.println(b);
+    }
     public static void wrap(){
         System.out.println("\n");
     }

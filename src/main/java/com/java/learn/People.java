@@ -63,4 +63,18 @@ public class People implements Comparable{
         }
     }
 
+//    Method overload compareTo: return People Object is older than other or not
+public void compareToo(Object other) {
+    if (other == null || !(other instanceof People)) {
+        throw new IllegalArgumentException("The other object must be a non-null instance of People");
+    }
+    People otherP = (People) other;
+    try {
+        assert this.age > otherP.age : "not older";
+    } catch (AssertionError e) {
+        System.out.println(e.getMessage());
+    }
+    Stream.text("The compare is completed.");
+}
+
 }

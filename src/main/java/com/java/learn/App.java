@@ -3,6 +3,7 @@ package com.java.learn;
 import com.tool.Stream;
 import com.tool.Calculator;
 
+import javax.management.ObjectName;
 import java.util.Iterator;
 
 /**
@@ -414,7 +415,21 @@ public class App
         Stream.delimiter();
         Stream.topic("Random Number");
         Calculator.geRandom(101);
+        Stream.delimiter();
 
+//        use method loopFamily to loop through the enum Family
+        Stream.topic("Assertion");
+        People people = new People("gj",3);
+        People people1 = new People("fd",12);
+        Object o = new Object();
+        o = (Object)people1;
+        Stream.text("People is older than people1 or not:  ");
+//        enable assertion
+        ClassLoader loader = ClassLoader.getSystemClassLoader();
+        loader.setDefaultAssertionStatus(true);
+        people.compareToo(o);
 
+//        use method loopFamily to loop through  enum Family
+        people1.loopFamily();
     }
 }
