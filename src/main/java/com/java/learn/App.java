@@ -431,5 +431,13 @@ public class App
 
 //        use method loopFamily to loop through  enum Family
         people1.loopFamily();
+
+//        test to for each
+        int[] a={1,2,3,4};
+        for(int i : a){
+            i=100;
+            //定情物诋毁，请外地好几千万耦合的，亲卫队瓯海区奇偶诋毁，亲卫队瓯海区启动，
+            Stream.blank(i+" ");
+        }
     }
 }
